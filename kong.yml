@@ -1,0 +1,10 @@
+_format_version: "2.1"
+
+services:
+  - name: hello-example
+    host: flask-app:5000
+    protocol: http
+    routes:
+    - name: dummy-route
+      paths:
+        - /chaio
