@@ -2,9 +2,14 @@ _format_version: "2.1"
 
 services:
   - name: hello-example
-    host: flask-app:5000
-    protocol: http
+    url: http://flask-app:5000/chaio
     routes:
     - name: dummy-route
       paths:
         - /chaio
+  - name: greet-svc
+    url: http://flask-app:5000/greet
+    routes:
+    - name: greet-route
+      paths:
+        - /greet
