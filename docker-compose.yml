@@ -9,7 +9,7 @@ services:
     image: kong:latest
     restart: always
     volumes:
-      - ./kong.yml:/usr/local/kong/declarative/kong.yml
+      - ./kong/kong.yml:/usr/local/kong/declarative/kong.yml
     environment:
       KONG_PROXY_LISTEN: 0.0.0.0:8000
       KONG_PROXY_LISTEN_SSL: 0.0.0.0:8443
@@ -37,8 +37,8 @@ services:
   #######################################
   flask-app:
     build:
-      context: ./
-      dockerfile: flask.dockerfile
+      context: ./flask-app/
+      dockerfile: Dockerfile
     image: flask-app
     ports:
       - 5000:5000
