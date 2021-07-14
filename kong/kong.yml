@@ -9,3 +9,10 @@ services:
     - name: dummy-route
       paths:
         - /
+  - name: service-app
+    url: http://flask-app:5000/services
+    routes:
+    - name: service-route
+      paths:
+        - /services
+        - /virtual-path

@@ -10,3 +10,11 @@ def hello_world():
 @app.route('/greet')
 def greet_func():
     return 'Hello, This is /greet !'
+
+@app.route('/services/consumer')
+def svc_consumer():
+    return 'Hello, consumer !'
+
+@app.route('/services/goods')
+def svc_good():
+    return 'Its good !'
