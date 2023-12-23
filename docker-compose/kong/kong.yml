@@ -10,7 +10,7 @@ services:
       paths:
         - /
   - name: service-app
-    url: http://flask-app:5000/services
+    url: http://flask-app:8000/services
     routes:
     - name: service-route
       paths:

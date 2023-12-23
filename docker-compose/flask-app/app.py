@@ -18,3 +18,6 @@ def svc_consumer():
 @app.route('/services/goods')
 def svc_good():
     return 'Its good !'
+
+if __name__ == '__main__':
+	app.run(host='0.0.0.0', port=8000)
