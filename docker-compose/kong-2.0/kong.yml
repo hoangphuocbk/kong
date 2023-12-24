@@ -1,0 +1,11 @@
+_format_version: "2.1"
+
+services:
+  - name: service-app
+    url: http://flask-app:8000
+    routes:
+    - name: service-route
+      strip_path: false
+      paths:
+        - /services
+        - /virtual-path
